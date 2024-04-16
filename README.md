@@ -30,5 +30,6 @@ MyBatis-Study
     
 
 ## 2. MyBatis download & 설정
+https://mybatis.org/mybatis-3/
 
 ## 3. XML(SqlMapConfig.xml)파일 생성
