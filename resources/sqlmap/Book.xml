@@ -26,4 +26,29 @@
         ]]>
     </select>
 
+    <resultMap id="result_1" type="BookVO">
+        <result property="bisbn" column="my_isbn" jdbcType="VARCHAR" javaType="String" />
+        <result property="btitle" column="my_title" />
+        <result property="bprice" column="my_price" />
+        <result property="bauthor" column="my_author" />
+    </resultMap>
+
+    <select id="selectByISBNResultMap" parameterType="String" resultMap="result_1">
+        <![CDATA[
+        SELECT bisbn AS my_isbn,
+               btitle AS my_title,
+               bprice AS my_price,
+               bauthor AS my_author
+        FROM book
+        WHERE bisbn = #{bisbn}
+        ]]>
+    </select>
+
+    <update id="titleUpdate" parameterType="BookVO">
+        <![CDATA[
+        UPDATE book
+        SET btitle = #{btitle}
+        WHERE bisbn = #{bisbn}
+        ]]>
+    </update>
 </mapper>
