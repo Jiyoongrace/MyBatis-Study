@@ -15,10 +15,10 @@ MyBatis-Study
 
 ### 1.1 MyBatis 특징
 
-- 복잡한 JDBC 코드를 걷어내고 **`깔끔한 소스 코드`**를 유지할 수 있다.
-- SQL 실행 결과가 기본적으로 **`Map에 Mapping`** 된다.
-    - 기본 JDBC는 ResultSet이라는 커서를 리턴 받아서 일반적으로 while을 돌면서 결과 처리를 하게 되는데, 이 과정이 생략되고 자동으로 결과 데이터가 HashMap에 저장된다. HashMap 뿐만 아니라 **`VO에도 저장이 가능`**하다.
-- SQL 문장을 자바 소스 코드에서 분리해서 따로 **`XML 파일`**로 관리한다.
+- 복잡한 JDBC 코드를 걷어내고 `깔끔한 소스 코드`를 유지할 수 있다.
+- SQL 실행 결과가 기본적으로 `Map에 Mapping` 된다.
+    - 기본 JDBC는 ResultSet이라는 커서를 리턴 받아서 일반적으로 while을 돌면서 결과 처리를 하게 되는데, 이 과정이 생략되고 자동으로 결과 데이터가 HashMap에 저장된다. HashMap 뿐만 아니라 `VO에도 저장이 가능`하다.
+- SQL 문장을 자바 소스 코드에서 분리해서 따로 `XML 파일`로 관리한다.
 - DataSource 기능과 Transaction 처리 기능을 제공한다.
     - DataSource(Connection Pool)
     - Pool은 Resource를 모아놓은 저장소
