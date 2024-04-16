@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="example.mybook">
+    <select id="selectByISBNHashMap" parameterType="String" resultType="HashMap">
+        <![CDATA[
+        SELECT bisbn, btitle, bprice, bauthor
+        FROM book
+        WHERE bisbn = #{bisbn}
+        ]]>
+    </select>
+
+    <select id="selectByAllHashMap" parameterType="String" resultType="HashMap">
+        <![CDATA[
+        SELECT bisbn, btitle, bprice, bauthor
+        FROM book
+        ]]>
+    </select>
+
+</mapper>
