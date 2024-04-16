@@ -2,6 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+resources/driver.properties
 
 ### Eclipse ###
 .apt_generated
