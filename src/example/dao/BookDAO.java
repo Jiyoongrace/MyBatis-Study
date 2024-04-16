@@ -1,5 +1,6 @@
 package example.dao;
 
+import example.vo.BookVO;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -28,7 +29,6 @@ public class BookDAO {
 
         try {
             result = session.selectOne("example.mybook.selectByISBNHashMap", bisbn);
-            System.out.println(result);
         } catch (Exception e) {
             System.out.println(e);
         } finally {
@@ -52,4 +52,21 @@ public class BookDAO {
         }
         return result;
     }
+
+    // 3. ISBN 번호를 입력으로 받아서 책 1권의 데이터를 BookVO로 만들어서 리턴하는 method를 작성해보자.
+    public BookVO selectByISBNBookVO(String bisbn) {
+
+        BookVO result = null;
+        SqlSession session = sqlSessionFactory.openSession();
+
+        try {
+            result = session.selectOne("example.mybook.selectByISBNBookVO", bisbn);
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            session.close();
+        }
+        return result;
+    }
+
 }

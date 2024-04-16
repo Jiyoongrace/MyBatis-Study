@@ -18,4 +18,12 @@
         ]]>
     </select>
 
+    <select id="selectByISBNBookVO" parameterType="String" resultType="BookVO">
+        <![CDATA[
+        SELECT bisbn, btitle, bprice, bauthor
+        FROM book
+        WHERE bisbn = #{bisbn}
+        ]]>
+    </select>
+
 </mapper>
